@@ -36,16 +36,16 @@ Shows the number of positive, neutral, and negative messages in:
 - **Validation Data**
 
 
-###📍 2. Entity Distribution (Training Data)
+### 📍 2. Entity Distribution (Training Data)
 Visualizes how many messages contain certain keywords/entities, such as:
 
--Brands
--Topics
--Hashtags
+- **Brands**
+- **Topics**
+- **Hashtags**
 
-###🧠 Tools Used
-*Pandas & NumPy for data handling
-*NLTK for text processing
-*Seaborn & Matplotlib for visualization
+### 🧠 Tools Used
+**Pandas & NumPy for data handling**
+**NLTK for text processing**
+**Seaborn & Matplotlib for visualization**
 
 
