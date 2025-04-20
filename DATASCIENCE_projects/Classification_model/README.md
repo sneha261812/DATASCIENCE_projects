@@ -80,5 +80,4 @@ The dataset contains details of direct marketing campaigns (phone calls) of a Po
 
 ---
 
-## 📁 Folder Structure
 
