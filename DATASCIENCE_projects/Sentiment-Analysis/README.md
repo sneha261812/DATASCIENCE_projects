@@ -1,58 +1,54 @@
-# Prodigy-Infotech-Internship-Task-4
-
 # 💬 Social Media Sentiment Analysis
 
-Analyze and visualize sentiment trends in social media content to gain actionable insights into **public opinion**, **brand perception**, or **topic engagement**.
+A mini project to analyze sentiment in social media posts using Natural Language Processing. The goal is to classify posts as **Positive**, **Neutral**, or **Negative**, and understand trends through visualization.
 
 ---
 
-## 🧭 Project Objective
+## 📁 Dataset
 
-This project focuses on using Natural Language Processing (NLP) techniques to classify social media posts (e.g., tweets) into sentiment categories such as:
-
-- ✅ **Positive**
-- ⚪ **Neutral**
-- ❌ **Negative**
-
-Visualizations such as word clouds and time-based sentiment trends provide a deeper understanding of emotional tone and user engagement over time.
+The dataset includes:
+- Social media messages (tweets/posts)
+- Labeled sentiment for training data
+- No labels for validation/test data
 
 ---
 
-## 📦 Tools & Technologies
+## 🔧 Steps Involved
 
-| Library        | Purpose                                 |
-|----------------|------------------------------------------|
-| `Pandas`       | Data loading and manipulation            |
-| `NLTK`, `TextBlob`, `VADER` | Text preprocessing & sentiment classification |
-| `Matplotlib`, `Seaborn` | Data visualization                 |
-| `WordCloud`    | Visualizing frequent keywords            |
-| `re` (Regex)   | Text cleaning                            |
+### 1. 🧹 Data Cleaning
+- Removed URLs, mentions, hashtags, special characters
+- Converted text to lowercase
+- Removed stopwords
+- Tokenized and lemmatized the text
 
----
-
-## 📁 Data Source
-
-- **Option 1:** Real-time data from the **Twitter API** using Tweepy  
-- **Option 2:** Pre-collected **CSV dataset** of tweets or posts with timestamp and content
+### 2. 🧪 Preprocessing
+- Extracted message length
+- Created a new column for sentiment labels (for classification)
+- Prepared datasets for training and validation
 
 ---
 
-## 🧹 Data Cleaning & Preprocessing
+## 📊 Visualizations
 
-### 1️⃣ Text Cleaning
-- Remove URLs, hashtags, mentions
-- Convert to lowercase
-- Remove special characters and numbers
-- Eliminate stopwords (using NLTK)
-- Tokenize and lemmatize text
+### 📍 1. Sentiment Distribution
+Shows the number of positive, neutral, and negative messages in:
+- **Training Data**
+- **Validation Data**
 
 ```python
-import re
-from nltk.corpus import stopwords
+sns.countplot(data=train_df, x='Sentiment')
+sns.countplot(data=val_df, x='Sentiment')
 
-def clean_text(text):
-    text = re.sub(r"http\S+|www\S+|https\S+", '', text)
-    text = re.sub(r'\@\w+|\#','', text)
-    text = re.sub(r'[^A-Za-z\s]', '', text)
-    text = text.lower()
-    return ' '.join([word for word in text.split() if word not in stopwords.words('english')])
+###📍 2. Entity Distribution (Training Data)
+Visualizes how many messages contain certain keywords/entities, such as:
+
+-Brands
+-Topics
+-Hashtags
+
+###🧠 Tools Used
+*Pandas & NumPy for data handling
+*NLTK for text processing
+*Seaborn & Matplotlib for visualization
+
+
