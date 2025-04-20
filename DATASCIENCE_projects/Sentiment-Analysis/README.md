@@ -35,9 +35,6 @@ Shows the number of positive, neutral, and negative messages in:
 - **Training Data**
 - **Validation Data**
 
-```python
-sns.countplot(data=train_df, x='Sentiment')
-sns.countplot(data=val_df, x='Sentiment')
 
 ###📍 2. Entity Distribution (Training Data)
 Visualizes how many messages contain certain keywords/entities, such as:
