@@ -1,4 +1,4 @@
-# Prodigy-Infotech-Internship-Task-2
+## Prodigy-Infotech-Internship-Task-2
 
 # 📊 Demographic Visualization: Age and Gender Distribution
 
